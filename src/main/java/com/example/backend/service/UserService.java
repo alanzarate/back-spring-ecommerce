@@ -45,6 +45,16 @@ public class UserService {
         adminUser.setRole(adminRoles);
         userDao.save(adminUser);
 
+        User adminUser2 = new User();
+        adminUser2.setUserName("admin");
+        adminUser2.setUserPassword(getEncodedPassword("admin123"));
+        adminUser2.setUserFirstName("Superadmin");
+        adminUser2.setUserLastName("Ultradmin");
+        Set<Role> adminRoles2 = new HashSet<>();
+        adminRoles2.add(adminRole);
+        adminUser2.setRole(adminRoles2);
+        userDao.save(adminUser2);
+
         User user = new User();
         user.setUserName("lanplay");
         user.setUserPassword(getEncodedPassword("lanplay123"));
