@@ -53,6 +53,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         } else {
 
             System.out.println("(configuration/JWTRequestFilter) JWT token does not start with Bearer");
+            System.out.println(requestTokenHeader);
 
         }
 
