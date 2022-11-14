@@ -73,4 +73,15 @@ public class Product {
     public void setProductActualPrice(Double productActualPrice) {
         this.productActualPrice = productActualPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
+                ", productDescription='" + productDescription + '\'' +
+                ", productDiscountedPrice=" + productDiscountedPrice +
+                ", productActualPrice=" + productActualPrice +
+                '}';
+    }
 }
